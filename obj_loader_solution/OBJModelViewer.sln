@@ -3,12 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CT5036", "obj_loader\obj_loader.vcxproj", "{FF2BAEE9-352D-4EA4-A764-FE7824052B36}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "obj_loader", "robust_obj_loader\robust_obj_loader.vcxproj", "{99A10956-40ED-4F43-9B2B-A1CD2005C6E0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OBJModelViewer", "OBJModelViewer\OBJModelViewer.vcxproj", "{2027AFBE-BA5D-46B4-A83E-BF664FF3D46B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{99A10956-40ED-4F43-9B2B-A1CD2005C6E0} = {99A10956-40ED-4F43-9B2B-A1CD2005C6E0}
 	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "obj_loader", "robust_obj_loader\robust_obj_loader.vcxproj", "{99A10956-40ED-4F43-9B2B-A1CD2005C6E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,14 +16,14 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FF2BAEE9-352D-4EA4-A764-FE7824052B36}.Debug|x64.ActiveCfg = Debug|x64
-		{FF2BAEE9-352D-4EA4-A764-FE7824052B36}.Debug|x64.Build.0 = Debug|x64
-		{FF2BAEE9-352D-4EA4-A764-FE7824052B36}.Release|x64.ActiveCfg = Release|x64
-		{FF2BAEE9-352D-4EA4-A764-FE7824052B36}.Release|x64.Build.0 = Release|x64
 		{99A10956-40ED-4F43-9B2B-A1CD2005C6E0}.Debug|x64.ActiveCfg = Debug|x64
 		{99A10956-40ED-4F43-9B2B-A1CD2005C6E0}.Debug|x64.Build.0 = Debug|x64
 		{99A10956-40ED-4F43-9B2B-A1CD2005C6E0}.Release|x64.ActiveCfg = Release|x64
 		{99A10956-40ED-4F43-9B2B-A1CD2005C6E0}.Release|x64.Build.0 = Release|x64
+		{2027AFBE-BA5D-46B4-A83E-BF664FF3D46B}.Debug|x64.ActiveCfg = Debug|x64
+		{2027AFBE-BA5D-46B4-A83E-BF664FF3D46B}.Debug|x64.Build.0 = Debug|x64
+		{2027AFBE-BA5D-46B4-A83E-BF664FF3D46B}.Release|x64.ActiveCfg = Release|x64
+		{2027AFBE-BA5D-46B4-A83E-BF664FF3D46B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

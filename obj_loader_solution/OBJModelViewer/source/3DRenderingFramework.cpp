@@ -148,6 +148,7 @@ void _3DRenderingFramework::RenderOBJModel(OBJModel* a_model, glm::mat4 a_projec
 		int kA_location = glGetUniformLocation(m_objProgram, "kA");
 		int kD_location = glGetUniformLocation(m_objProgram, "kD");;
 		int kS_location = glGetUniformLocation(m_objProgram, "kS");
+		int okTexLoc = glGetUniformLocation(m_objProgram, "textureUsed");
 
 
 		OBJMaterial* p_material = nullptr;
@@ -157,6 +158,9 @@ void _3DRenderingFramework::RenderOBJModel(OBJModel* a_model, glm::mat4 a_projec
 		}
 		if (p_material != nullptr)
 		{
+			//Tell the shader there is an ok material.
+			glUniform1i(okTexLoc, 1);
+
 			lastOkMaterial = p_material;
 			//Send the OBJ Model's world matrix data across to the shader program.
 			glUniform4fv(kA_location, 1, glm::value_ptr(p_material->kA));
@@ -192,6 +196,9 @@ void _3DRenderingFramework::RenderOBJModel(OBJModel* a_model, glm::mat4 a_projec
 			//Check previous material to see if we can apply that texture data to the mesh instead.
 			if (lastOkMaterial != nullptr)
 			{
+				//Tell the shader there is an ok material.
+				glUniform1i(okTexLoc, 1);
+
 				//Send the OBJ Model's world matrix data across to the shader program.
 				glUniform4fv(kA_location, 1, glm::value_ptr(lastOkMaterial->kA));
 				glUniform4fv(kD_location, 1, glm::value_ptr(lastOkMaterial->kD));
@@ -223,6 +230,9 @@ void _3DRenderingFramework::RenderOBJModel(OBJModel* a_model, glm::mat4 a_projec
 			}
 			else //If there's been no texture data to apply at all apply default material to the mesh.
 			{
+				//Tell the shader there is not an ok material.
+				glUniform1i(okTexLoc, 0);
+
 				//Send the OBJ Model's world matrix data across to the shader program.
 				glUniform4fv(kA_location, 1, glm::value_ptr(m_defaultMaterialColour));
 				glUniform4fv(kD_location, 1, glm::value_ptr(glm::vec4(m_defaultMaterialColour.x * 4, m_defaultMaterialColour.y * 4, m_defaultMaterialColour.z * 4, 1.0f)));

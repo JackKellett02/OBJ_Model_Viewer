@@ -9,5 +9,5 @@ uniform float lightStrength;
 void main()
 {   
     vec4 textureVal = texture(skybox, TexCoords);
-    FragColor = textureVal * ((lightStrength / 100.0f) * 0.65f);
+    FragColor = textureVal * ((lightStrength / 100.0f));
 }

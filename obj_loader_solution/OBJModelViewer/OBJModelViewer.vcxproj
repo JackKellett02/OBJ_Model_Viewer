@@ -13,10 +13,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ff2baee9-352d-4ea4-a764-fe7824052b36}</ProjectGuid>
+    <ProjectGuid>{2027AFBE-BA5D-46B4-A83E-BF664FF3D46B}</ProjectGuid>
     <RootNamespace>objloader</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>CT5036</ProjectName>
+    <ProjectName>OBJModelViewer</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
